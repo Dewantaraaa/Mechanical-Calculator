@@ -88,5 +88,9 @@ function calculateTotal() {
     displayInventory();
 }
 
+function handleInputChange(input) {
+    // Mengganti spasi dengan simbol +
+    input.value = input.value.replace(/\s+/g, '+');
+}
 // Initialize inventory display on page load
 displayInventory();

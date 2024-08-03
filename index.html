@@ -30,7 +30,7 @@
         <input type="number" id="profit" placeholder="Contoh: 15" />
 
         <label for="totalComponents">Jumlah Component</label>
-        <input type="text" id="totalComponents" placeholder="Contoh: 100 + 150" />
+        <input type="text" id="totalComponents" placeholder="Contoh: 100+150 (spasi akan otomatis muncul (+))" oninput="handleInputChange(this)" />
         
         <button onclick="calculateTotal()">Calculate</button>
         
@@ -47,3 +47,10 @@
     <script src="script.js"></script> <!-- Menggunakan file eksternal untuk JavaScript -->
 </body>
 </html>
+
+<script>
+    function handleInputChange(input) {
+        // Mengganti spasi dengan simbol +
+        input.value = input.value.replace(/\s+/g, '+');
+    }
+    </script>
