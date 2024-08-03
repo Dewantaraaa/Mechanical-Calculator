@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Lebar formulir */
+    text-align: center;
+}
+
+.calculator h2 {
+    margin-bottom: 20px;
+}
+
+.calculator label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.calculator input, .calculator button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+.calculator button {
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background-color: #218838;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.inventory {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.inventory p {
+    margin: 5px 0;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    border-top: 1px solid #000; /* Garis atas hitam di atas Calculation Status */
+    padding-top: 10px; /* Ruang antara garis atas dan isi */
+}
+
+.instagram-link {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Mengatur lapisan untuk tetap di atas konten lain */
+}
+
+.instagram-logo {
+    width: 40px; /* Ukuran gambar logo Instagram */
+    height: 40px; /* Ukuran gambar logo Instagram */
+    display: block;
+}
+
+/* Optional: Styling for responsive design */
+@media (max-width: 768px) {
+    .instagram-link {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+/* Untuk layar kecil (misalnya smartphone) */
+@media only screen and (max-width: 600px) {
+    .calculator {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .left-form, .right-form {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .calculator input, .calculator button {
+        width: 100%;
+    }
+}
+
+/* Untuk layar sedang dan besar */
+@media only screen and (min-width: 601px) {
+    .calculator {
+        width: 80%;
+        max-width: 800px; /* Maksimum lebar untuk desktop */
+    }
+
+    .form-container {
+        flex-direction: row;
+    }
+
+    .left-form, .right-form {
+        width: calc(50% - 10px);
+        margin-bottom: 0;
+    }
+}

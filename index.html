@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanical Calculator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Menggunakan file eksternal untuk CSS -->
+	<link href='img/logo.svg' rel='shortcut icon'>
+</head>
+<body>
+
+	<a href="https://www.instagram.com/dewantarraa/" target="_blank" class="instagram-link">
+		<img src="img/path_to_instagram_logo.svg" alt="Instagram" class="instagram-logo">
+	</a>
+	
+	<main>
+
+	</main>
+
+    <div class="calculator">
+        <h2>Mechanical Calculator</h2>
+        
+        <label for="componentPrice">Harga Component</label>
+        <input type="number" id="componentPrice" placeholder="Contoh: 0.55"/>
+
+		<label for="componentQuantity">Inventory Component</label>
+        <input type="number" id="componentQuantity" placeholder="Contoh: 2000" oninput="updateInventory()"/>
+
+        <label for="profit">Atur Keuntungan</label>
+        <input type="number" id="profit" placeholder="Contoh: 15" />
+
+        <label for="totalComponents">Jumlah Component</label>
+        <input type="text" id="totalComponents" placeholder="Contoh: 100 + 150" />
+        
+        <button onclick="calculateTotal()">Calculate</button>
+        
+        <div class="result" id="result"></div>
+        <div class="inventory" id="inventory">
+            <h3>Inventory</h3>
+        </div>
+    </div>
+
+	<footer>
+
+	</footer>
+
+    <script src="script.js"></script> <!-- Menggunakan file eksternal untuk JavaScript -->
+</body>
+</html>
