@@ -50,7 +50,17 @@
 
 <script>
     function handleInputChange(input) {
-        // Mengganti spasi dengan simbol +
-        input.value = input.value.replace(/\s+/g, '+');
+    // Mengganti spasi dengan simbol +
+    input.value = input.value.replace(/\s+/g, '+');
+    
+    // Menghapus tanda plus berlebihan
+    input.value = input.value.replace(/\++/g, '+');
+    
+    if (input.value.trim() === '') {
+        input.value = '';
+    } else if (input.value.startsWith('+')) {
+        input.value = input.value.substring(1); // Hapus plus di awal jika ada
     }
+}
+
     </script>
